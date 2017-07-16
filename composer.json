@@ -1,5 +1,16 @@
 {
     "name": "chadi/cyRestPHP",
+    "description": "PHP's wrapper for Cytoscape's cyRest API",
+    "homepage": "",
+    "license": "Apache 2.0",
+    "keywords": ["cytoscape", "cyrest", "rest", "api"],
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "Christian Hadi",
+            "email": "chadilukito@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-0" : {
             "cyRestPHP" : "src"
