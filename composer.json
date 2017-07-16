@@ -1,0 +1,19 @@
+{
+    "name": "chadi/cyRestPHP",
+    "autoload": {
+        "psr-0" : {
+            "cyRestPHP" : "src"
+        }
+    },
+    
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/chadilukito/cyRestPHP"
+        }
+    ],
+    
+    "require": {
+        "nategood/httpful": "^0.2.20"
+    }
+}
