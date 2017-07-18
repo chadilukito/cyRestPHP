@@ -4,7 +4,7 @@
  * Copyright (c) 2017 Christian Hadi
  */
  
-namespace cyRestPHP\Networks;
+namespace cyRestPHP\V1\Networks;
 
 class cyNetworks
 {
@@ -47,7 +47,10 @@ class cyNetworks
     {
         $uri = $request->getHttpUrl()."/".$request->getRestApiVersion()."/networks";
         if (empty($networkArray) && !is_array($networkArray)) return '';
-        if (!empty($collection) && (!empty($format) && ($format==NEW_NETWORK_FORMAT_JSON || $format==NEW_NETWORK_FORMAT_EDGELIST)) && !empty($title)) {
+        if (!empty($collection) && (!empty($format) && ($format==self::NEW_NETWORK_FORMAT_JSON || $format==self::NEW_NETWORK_FORMAT_EDGELIST)) && !empty($title)) {
+            $collection = str_replace(' ', '_', $collection);
+            $title = str_replace(' ', '_', $title);
+            
             $uri .= "/?collection=$collection&format=$format&title=$title";    
             if (!empty($source)) {
                 $uri .= "&source=$source";

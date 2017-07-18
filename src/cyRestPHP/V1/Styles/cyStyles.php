@@ -4,7 +4,7 @@
  * Copyright (c) 2017 Christian Hadi
  */
  
-namespace cyRestPHP\Styles;
+namespace cyRestPHP\V1\Styles;
 
 class cyStyles
 {

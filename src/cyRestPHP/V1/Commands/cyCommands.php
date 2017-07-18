@@ -4,7 +4,7 @@
  * Copyright (c) 2017 Christian Hadi
  */
  
-namespace cyRestPHP\Commands;
+namespace cyRestPHP\V1\Commands;
 
 class cyCommands
 {

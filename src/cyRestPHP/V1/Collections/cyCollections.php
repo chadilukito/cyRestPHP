@@ -4,7 +4,7 @@
  * Copyright (c) 2017 Christian Hadi
  */
  
-namespace cyRestPHP\Collections;
+namespace cyRestPHP\V1\Collections;
 
 class cyCollections
 {

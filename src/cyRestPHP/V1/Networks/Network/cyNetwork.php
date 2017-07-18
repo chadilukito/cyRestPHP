@@ -4,7 +4,7 @@
  * Copyright (c) 2017 Christian Hadi
  */
  
-namespace cyRestPHP\Networks\Network;
+namespace cyRestPHP\V1\Networks\Network;
 
 class cyNetwork
 {    

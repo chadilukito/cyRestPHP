@@ -4,7 +4,7 @@
  * Copyright (c) 2017 Christian Hadi
  */
  
-namespace cyRestPHP\UI;
+namespace cyRestPHP\V1\UI;
 
 class cyUI
 {
