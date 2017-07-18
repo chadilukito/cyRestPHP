@@ -14,98 +14,98 @@ namespace cyRestPHP;
 class Response
 {
     /** @var string|null API path from the most recent request */
-    private $apiPath;
+    private static $apiPath;
     /** @var int HTTP status code from the most recent request */
-    private $httpCode = 0;
+    private static $httpCode = 0;
     /** @var array HTTP headers from the most recent request */
-    private $headers = [];
+    private static $headers = [];
     /** @var array|object Response body from the most recent request */
-    private $body = [];
+    private static $body = [];
     /** @var array HTTP headers from the most recent request that start with X */
-    private $xHeaders = [];
+    private static $xHeaders = [];
     
     /**
      * @param string $apiPath
      */
-    public function setApiPath($apiPath)
+    public static function setApiPath($apiPath)
     {
-        $this->apiPath = $apiPath;
+        self::$apiPath = $apiPath;
     }
     
     /**
      * @return string|null
      */
-    public function getApiPath()
+    public static function getApiPath()
     {
-        return $this->apiPath;
+        return self::$apiPath;
     }
     
     /**
      * @param array|object $body
      */
-    public function setBody($body)
+    public static function setBody($body)
     {
-        $this->body = $body;
+        self::$body = $body;
     }
     
     /**
      * @return array|object|string
      */
-    public function getBody()
+    public static function getBody()
     {
-        return $this->body;
+        return self::$body;
     }
     
     /**
      * @param int $httpCode
      */
-    public function setHttpCode($httpCode)
+    public static function setHttpCode($httpCode)
     {
-        $this->httpCode = $httpCode;
+        self::$httpCode = $httpCode;
     }
     
     /**
      * @return int
      */
-    public function getHttpCode()
+    public static function getHttpCode()
     {
-        return $this->httpCode;
+        return self::$httpCode;
     }
     
     /**
      * @param array $headers
      */
-    public function setHeaders(array $headers)
+    public static function setHeaders(array $headers)
     {
         foreach ($headers as $key => $value) {
             if (substr($key, 0, 1) == 'x') {
-                $this->xHeaders[$key] = $value;
+                self::$xHeaders[$key] = $value;
             }
         }
-        $this->headers = $headers;
+        self::$headers = $headers;
     }
     
     /**
      * @return array
      */
-    public function getsHeaders()
+    public static function getsHeaders()
     {
-        return $this->headers;
+        return self::$headers;
     }
     
     /**
      * @param array $xHeaders
      */
-    public function setXHeaders(array $xHeaders = [])
+    public static function setXHeaders(array $xHeaders = [])
     {
-        $this->xHeaders = $xHeaders;
+        self::$xHeaders = $xHeaders;
     }
     
     /**
      * @return array
      */
-    public function getXHeaders()
+    public static function getXHeaders()
     {
-        return $this->xHeaders;
+        return self::$xHeaders;
     }
 }
