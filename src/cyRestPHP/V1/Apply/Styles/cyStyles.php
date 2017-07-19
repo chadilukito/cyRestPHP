@@ -29,7 +29,7 @@ class cyStyles
      * @param \Request $request
      * @param string $algorithmName
      * @param number $networkId
-     * @return object
+     * @return boolean
      *
      */
     public static function applyVisualStyleToNetwork($request, $styleName, $networkId)

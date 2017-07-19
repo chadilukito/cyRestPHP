@@ -102,7 +102,7 @@ class cyAlgorithm
      * @param string $algorithmName
      * @param number $networkId
      * @param string $column
-     * @return object
+     * @return boolean
      *
      */
     public static function applyLayoutToNetwork($request, $algorithmName, $networkId, $column='')

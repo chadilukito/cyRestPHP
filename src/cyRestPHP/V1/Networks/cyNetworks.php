@@ -40,7 +40,7 @@ class cyNetworks
      * @param string $title 
      * @param string $source
      * @param array $networkArray     
-     * @return array
+     * @return string
      *
      */
     public static function createNewNetwork($request, $collection, $format, $title, $source='', $networkArray)
@@ -70,7 +70,7 @@ class cyNetworks
     
     /**
      * @param \Request $request
-     * @return array
+     * @return boolean
      *
      */
     public static function deleteAllNetworksInCurrentSession($request)
@@ -87,7 +87,7 @@ class cyNetworks
     
     /**
      * @param \Request $request
-     * @return array
+     * @return number
      *
      */
     public static function getNumberOfNetworksInCurrentSession($request)
