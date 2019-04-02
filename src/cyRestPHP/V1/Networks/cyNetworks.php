@@ -65,7 +65,7 @@ class cyNetworks
         \cyRestPHP\Response::setHttpCode($result->code);
         \cyRestPHP\Response::setBody($result->body);
 
-        return (($result->code == 200)? $result->body->networkSUID : '');
+        return (($result->code == 200)? $result->body->networkSUID : $result->body);
     }    
     
     /**
